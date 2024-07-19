@@ -23,6 +23,9 @@ export default function HomeScreen({navigation}) {
             setGoal={setGoal}
           />
         </View>
+        {/* Test Nav, remove after nav component is done */}
+        <Button title="New Entry" onPress={()=>(navigation.navigate('NewEntry'))}/>
+        <Button title="Activities" onPress={()=>(navigation.navigate('Activities'))}/>
       </SafeAreaView>
     );
   };

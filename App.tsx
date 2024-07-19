@@ -14,6 +14,7 @@ import {
   View,
 } from 'react-native';
 import HomeScreen from './src/screens/HomeScreen';
+import NewEntry from './src/screens/NewEntry';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -28,9 +29,10 @@ function App(): React.JSX.Element {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="NewEntry" component={NewEntry} />
         </Stack.Navigator>
       </NavigationContainer>
-      <NavBar />
+      <NavBar/>
     </SafeAreaView>
   );
 }
