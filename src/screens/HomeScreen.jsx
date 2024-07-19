@@ -1,14 +1,28 @@
-import { Button, Text, View } from "react-native";
+"use client"
+
+import { Button, SafeAreaView, Text, View } from "react-native";
 import { styles } from "../styles/styles";
+import { useState } from "react";
+import SetGoalModal from "./SetGoalScreen";
+import NavBar from "../components/NavBar";
 
 export default function HomeScreen({navigation}) {
+    const [modalVisible, setModalVisible] = useState(false);
+    const [goal, setGoal] = useState('');
+  
     return (
-       <View>
-            <Text style={styles.title}>Expense Pro</Text>
-            <Button title="Set Your Monthly Goal" onPress={() => navigation.navigate("Set Goal")}/>
+      <SafeAreaView style={styles.container}>
+                  <Text style={styles.header}>Expense Pro</Text>    
+        <View>
+
+          <Button title="Set Your Monthly Goal" onPress={() => setModalVisible(true)} />
+          <SetGoalModal
+            modalVisible={modalVisible}
+            setModalVisible={setModalVisible}
+            goal={goal}
+            setGoal={setGoal}
+          />
         </View>
-
- 
-    )
-
-}
+      </SafeAreaView>
+    );
+  };

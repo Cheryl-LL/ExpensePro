@@ -6,6 +6,7 @@ import {
   Image,
   Modal,
   Pressable,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -16,19 +17,21 @@ import HomeScreen from './src/screens/HomeScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SetGoalScreen from './src/screens/SetGoalScreen';
-import { styles } from './src/styles/styles';
+import SetGoalModal from './src/screens/SetGoalScreen';
+import NavBar from './src/components/NavBar';
 
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
   return (
+    <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Set Goal" component={SetGoalScreen} />
         </Stack.Navigator>
       </NavigationContainer>
+      <NavBar />
+    </SafeAreaView>
   );
 }
 
