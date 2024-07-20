@@ -67,6 +67,14 @@ export const styles = StyleSheet.create({
     color: '#888',
     textAlign: 'center',
   },
+  navItem: {
+    alignItems: 'center', 
+    justifyContent: 'center',
+  },
+  navIcon: {
+    marginBottom: 4,
+    size: 24,
+  },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',

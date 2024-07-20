@@ -1,21 +1,24 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "../styles/styles";
-import Icon from 'react-native-vector-icons/Ionicons';
+import { IconFill, IconOutline } from "@ant-design/icons-react-native";
+import { useNavigation } from '@react-navigation/native';
 
-export default function NavBar({navigation}) {
+export default function NavBar() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.navbar}>
-      <TouchableOpacity style={styles.navItem}>
-        <Icon name="home-outline" size={24} color="#888" />
+      <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('Home')}>
+        <IconOutline name="home" style={styles.navIcon}/>
         <Text style={styles.navText}>Home</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem} onPress={()=>(navigation.navigate('NewEntry'))}>
-        <Icon name="add-outline" size={24} color="#888" />
+      <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('NewEntry')}>
+        <IconOutline name="plus-circle" style={styles.navIcon}/>
         <Text style={styles.navText}>New Entry</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem} >
-        <Icon name="list-outline" size={24} color="#888" />
-        <Text style={styles.navText} >Activities</Text>
+      <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('Activities')}>
+        <IconOutline name="unordered-list" style={styles.navIcon}/>
+        <Text style={styles.navText}>Activities</Text>
       </TouchableOpacity>
     </View>
   );
