@@ -6,9 +6,18 @@ const dataStorage = new MMKV({
     id: 'userData',
     encryptionKey:'verySecureDataLOL'
   });
-  export const setGoal=(month,goal)=>{
-    
-  }
+  
+  export const setGoal = (month, goal) => {
+    const goals = loadGoals() || {};
+    goals[month] = goal;
+    dataStorage.set('goals', JSON.stringify(goals));
+  };
+
+  export const loadGoals = () => {
+    const goalsString = dataStorage.getString('goals');
+    return goalsString ? JSON.parse(goalsString) : {};
+  };
+
   export const saveEntry = (id, entry) =>{
     dataStorage.set(id, JSON.stringify(entry));
   }
