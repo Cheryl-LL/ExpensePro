@@ -81,4 +81,97 @@ export const styles = StyleSheet.create({
     width: '80%',
     marginTop: 20,
   },
+//new entry
+  entryButton: {
+    flex: 1,
+    padding: 15,
+    margin: 5,
+    backgroundColor: '#ccc',
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  activeIncomeButton: {
+    backgroundColor: 'green', 
+  },
+  activeExpenseButton: {
+    backgroundColor: 'red', 
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  dateInput: {
+    padding: 10,
+    width: 300,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    marginBottom: 20,
+  },
+  dropdown: {
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    marginBottom: 20,
+    padding: 10,
+    width: 300,
+  },
+  textInput: {
+    height: 40,
+    width: 300,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 20,
+  },
+  addButton: {
+    backgroundColor: '#007BFF',
+    padding: 15,
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  addButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  //Activities
+  itemContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginVertical: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+  date: {
+    flex: 1,
+  },
+  category: {
+    flex: 1,
+  },
+  description: {
+    flex: 2,
+  },
+  amount: {
+    flex: 1,
+    textAlign: 'right',
+  },
+  income: {
+    color: 'green',
+  },
+  expense: {
+    color: 'red',
+  },
+  noEntries: {
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 16,
+  },
 });

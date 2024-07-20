@@ -18,7 +18,6 @@
   import Activities from './src/screens/Activities';
   import { NavigationContainer } from '@react-navigation/native';
   import { createNativeStackNavigator } from '@react-navigation/native-stack';
-  import SetGoalModal from './src/screens/SetGoalModal';
   import NavBar from './src/components/NavBar';
 
   const Stack = createNativeStackNavigator();
