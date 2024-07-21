@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { FlatList, Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native';
 import { deleteAllEntry, loadAllEntry } from '../utilities/DataStorage';
 import { styles } from '../styles/styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Activities({ navigation }) {
   const [entries, setEntries] = useState([]);
@@ -29,7 +30,8 @@ export default function Activities({ navigation }) {
   };
 
   return (
-    <View>
+    <SafeAreaView>
+      <Text style={styles.header}>Activities</Text>
       <Button title='reset log (temporary button)' onPress={deleteAllEntry} />
       {entries.length !== 0 ? (
         <FlatList
@@ -38,6 +40,6 @@ export default function Activities({ navigation }) {
           keyExtractor={(item) => item.id}
         />
       ) : null}
-    </View>
+    </SafeAreaView>
   );
 }
