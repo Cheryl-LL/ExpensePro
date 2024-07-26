@@ -1,12 +1,13 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { FlatList, Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native';
-import { deleteAllEntry, loadAllEntry } from '../utilities/DataStorage';
+import { deleteAllEntry, loadAllEntry, loadEntry } from '../utilities/DataStorage';
 import { styles } from '../styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Activities({ navigation }) {
-  const [entries, setEntries] = useState([]);
+  const preloadEntry = loadAllEntry();
+  const [entries, setEntries] = useState(preloadEntry);
 
   useEffect(() => {
     const allEntries = loadAllEntry();

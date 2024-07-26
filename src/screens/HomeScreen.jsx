@@ -5,7 +5,7 @@ import { styles } from "../styles/styles";
 import { useEffect, useState } from "react";
 import SetGoalModal from "./SetGoalModal";
 import NavBar from "../components/NavBar";
-import { loadGoals } from '../utilities/DataStorage';
+import { deleteAllEntry, loadGoals } from '../utilities/DataStorage';
 
 export default function HomeScreen({navigation}) {
     const [modalVisible, setModalVisible] = useState(false);
@@ -42,6 +42,7 @@ export default function HomeScreen({navigation}) {
         {/* Test Nav, remove after nav component is done */}
         <Button title="New Entry" onPress={()=>(navigation.navigate('NewEntry'))}/>
         <Button title="Activities" onPress={()=>(navigation.navigate('Activities'))}/>
+        <Button title='reset log (temporary button)' onPress={deleteAllEntry} />
       </SafeAreaView>
     );
   };
