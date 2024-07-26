@@ -45,7 +45,7 @@ export default function NewEntry({navigation}) {
       id: getNextId(),
       type: entryType,
       date: date,
-      category: category,
+      category: category ? category.value : null,
       description: description,
       amount: parseFloat(amount),
     };

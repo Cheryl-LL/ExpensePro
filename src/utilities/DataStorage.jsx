@@ -35,13 +35,16 @@ export const deleteAllEntry = () => {
 export const loadAllEntry = () => {
   const dataSize = dataStorage.getAllKeys();
   const entryList = [];
-  for (let data of dataSize) {
-    const entryString = dataStorage.getString(data);
-    const entry = entryString ? JSON.parse(entryString) : null;
-    if (entry != null) {
-      entryList.push(entry);
+  if (dataSize != null)
+  {
+    for (let data of dataSize) {
+      const entryString = dataStorage.getString(data);
+      const entry = entryString ? JSON.parse(entryString) : null;
+      if (entry != null) {
+        entryList.push(entry);
+      }
     }
-  }
+  } 
   return entryList;
 };
 
