@@ -175,4 +175,106 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 16,
   },
+
+  //Home screen
+  /*topContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  topText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  chartContainer: {
+    alignItems: 'center',
+    marginVertical: 20,
+  },
+  setGoalButton: {
+    backgroundColor: '#007BFF',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  setGoalButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  chartContainer: {
+    maxHeight: 220,
+    marginVertical: 20,
+},
+categoryItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+},
+categoryText: {
+    fontSize: 16,
+},
+percentageText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+},
+chartContainer: {
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginVertical: 20,
+  height: 250, 
+  width: '100%',
+},
+*/
+container: {
+  flex: 1,
+  padding: 20,
+  backgroundColor: '#fff',
+},
+topContainer: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  padding: 10,
+},
+topText: {
+  fontSize: 16,
+  fontWeight: 'bold',
+},
+header: {
+  fontSize: 24,
+  fontWeight: 'bold',
+  textAlign: 'center',
+  marginTop: 85, 
+},
+chartContainer: {
+  alignItems: 'center',
+  marginVertical: 20,
+  maxHeight: 220,
+},
+setGoalButton: {
+  backgroundColor: '#007BFF',
+  padding: 10,
+  borderRadius: 5,
+  alignItems: 'center',
+  marginTop: 10,
+},
+setGoalButtonText: {
+  color: 'white',
+  fontSize: 16,
+  fontWeight: 'bold',
+},
+goalContainer: {
+  alignItems: 'center',
+  marginVertical: 10,
+},
+goalHeader: {
+  fontSize: 18,
+  fontWeight: 'bold',
+},
+goalText: {
+  fontSize: 16,
+},
 });
