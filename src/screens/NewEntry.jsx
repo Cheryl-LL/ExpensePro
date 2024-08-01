@@ -50,7 +50,7 @@ export default function NewEntry({navigation}) {
       amount: parseFloat(amount),
     };
     saveEntry(newEntry.id, newEntry);
-    navigation.navigate('Activities');
+    navigation.navigate('Home');
   };
 
   return (
