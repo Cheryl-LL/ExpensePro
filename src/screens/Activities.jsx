@@ -33,7 +33,6 @@ export default function Activities({ navigation }) {
   return (
     <SafeAreaView>
       <Text style={styles.header}>Activities</Text>
-      <Button title='reset log (temporary button)' onPress={deleteAllEntry} />
       {entries.length !== 0 ? (
         <FlatList
           data={entries}
